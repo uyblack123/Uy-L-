@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        tr td {
+            width: 50px;
+        }
+
+        button {
+            width: 50px;
+        }
+
+        input[type=text] {
+            width: 200px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4">
+            <input type="text" id="scr">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="addTxt('(')">(</button>
+        </td>
+        <td>
+            <button onclick="addTxt(')')">)</button>
+        </td>
+        <td>
+            <button onclick="addTxt('%')">%</button>
+        </td>
+        <td>
+            <button onclick="resetScr()">AC</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="addTxt('7')">7</button>
+        </td>
+        <td>
+            <button onclick="addTxt('8')">8</button>
+        </td>
+        <td>
+            <button onclick="addTxt('9')">9</button>
+        </td>
+        <td>
+            <button onclick="addTxt('/')">/</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="addTxt('4')">4</button>
+        </td>
+        <td>
+            <button onclick="addTxt('5')">5</button>
+        </td>
+        <td>
+            <button onclick="addTxt('6')">6</button>
+        </td>
+        <td>
+            <button onclick="addTxt('*')">x</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="addTxt('1')">1</button>
+        </td>
+        <td>
+            <button onclick="addTxt('2')">2</button>
+        </td>
+        <td>
+            <button onclick="addTxt('3')">3</button>
+        </td>
+        <td>
+            <button onclick="addTxt('-')">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="addTxt('0')">0</button>
+        </td>
+        <td>
+            <button onclick="addTxt('.')">.</button>
+        </td>
+        <td>
+            <button onclick="cal()">=</button>
+        </td>
+        <td>
+            <button onclick="addTxt('+')">+</button>
+        </td>
+    </tr>
+</table>
+
+<script>
+    function addTxt(txt) {
+        document.getElementById('scr').value += txt;
+    }
+
+    function resetScr() {
+        document.getElementById('scr').value = ''
+    }
+    function cal() {
+        let rs = document.getElementById('scr').value;
+        document.getElementById('scr').value = eval();
+    }
+</script>
+</body>
+</html>
