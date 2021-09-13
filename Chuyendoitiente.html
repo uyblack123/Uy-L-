@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>kiểm tra năm nhuận</title>
+</head>
+<body>
+<h1> điền số năm ta sẽ kiểm tra nó là năm nhuận hay không.</h1>
+<input type="text" id="namntn">
+<button onclick="bamvao()" > đừng bấm vào đây</button>
+<script>
+  function  bamvao() {
+    let year=document.getElementById('namntn').value;
+    if(year%4===0){
+      if(year%100===0){
+        if (year%400===0) {
+          alert("năm nhuận nha chú em")
+        }
+        else {
+          alert('hình như k phải rùi')
+        }
+
+      }
+      else {
+        alert('năm nhuận nha chú em')
+      }
+
+    }
+    else {
+      alert('hình như k phải rùi')
+    }
+  }
+
+
+
+</script>
+</body>
+
+</html>
