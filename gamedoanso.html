@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game doan so</title>
+</head>
+<body>
+<button id="start" onclick="play()">Bat dau choi</button>
+<script>
+  function play() {
+    let a;
+    let b;
+    do {
+      a = +prompt("Nhap so nho nhat trong khoang muon choi:")
+      b = +prompt("Nhap so lon nhat trong khoang muon choi:")
+    } while (a >= b)
+    let guess = +prompt("Ban doan so nao?")
+    let c = a + Math.floor((Math.random() * (b - a)));
+    if (c === guess) {
+      alert('dung roi')
+    } else {
+      alert('sai roi')
+      let count=0;
+      while(count<=3) {
+        guess = +prompt("Doan lai di nao:")
+        if (c === guess) {
+          alert('dung roi');
+          break;
+        }else{
+          count++
+        }
+      }
+    }
+  }
+
+</script>
+
+</body>
+</html>
